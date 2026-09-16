@@ -9,15 +9,27 @@ import java.util.Scanner;
 public class ejercicioPlaylist {
 
     public static void main(String[] args) {
-        Map<Integer, String> canciones = cargarCanciones();
-        List<Integer> ordenPlaylist = new ArrayList<>(List.of(1, 2, 3, 4, 5));
-        Queue<Integer> colaReproduccion = new LinkedList<>();
-        Map<Integer, Integer> reproducciones = cargarReproducciones();
+        // TODO completar bloque de inicialización
+        canciones = cargarCanciones();
+        ordenPlaylist = ;// TODO
+        colaReproduccion = ;// TODO
+        reproducciones = cargarReproducciones();
 
         Scanner teclado = new Scanner(System.in);
         int opcion;
 
         do {
+            /*
+            Se muestra el menú con las opciones:
+            1) Mostrar canciones
+            2) Buscar canción por ID
+            3) Añádir canción a la cola de reproducción por ID
+            4) Reproducir la siguiente canción de la cola
+            5) Mostrar artistas
+            6) Mostrar la canción más reproducida
+            0) Salir
+            otro) Control de errores -ª opción no válida
+             */
             mostrarMenu();
             opcion = teclado.nextInt();
             teclado.nextLine();
@@ -48,35 +60,24 @@ public class ejercicioPlaylist {
     }
 
     private static Map<Integer, String> cargarCanciones() {
-        Map<Integer, String> canciones = new HashMap<>();
+        // TODO
+        /* Ejemplo de carga de canción
         canciones.put(1, "Blinding Lights - The Weeknd - pop");
-        canciones.put(2, "Lose Yourself - Eminem - rap");
-        canciones.put(3, "Despechá - Rosalía - pop");
-        canciones.put(4, "Seven Nation Army - The White Stripes - rock");
-        canciones.put(5, "Levitating - Dua Lipa - pop");
+        */
         return canciones;
     }
 
     private static Map<Integer, Integer> cargarReproducciones() {
-        Map<Integer, Integer> reproducciones = new HashMap<>();
+        //TODO
+        /* Ejemplo de registro de número de reproducciones
         reproducciones.put(1, 12);
-        reproducciones.put(2, 7);
-        reproducciones.put(3, 18);
-        reproducciones.put(4, 4);
-        reproducciones.put(5, 10);
+         */
         return reproducciones;
     }
 
     private static void mostrarMenu() {
-        System.out.println("\n=== SOUNDWAVE ===");
-        System.out.println("1. Mostrar playlist");
-        System.out.println("2. Buscar canción por ID");
-        System.out.println("3. Añadir canción a la cola");
-        System.out.println("4. Reproducir siguiente");
-        System.out.println("5. Mostrar artistas únicos");
-        System.out.println("6. Mostrar canción más reproducida");
-        System.out.println("0. Salir");
-        System.out.print("Opción: ");
+        System.out.println("\n=== MENU PRINCIPAL ===");
+        // TODO
     }
 
     private static void mostrarCanciones(Map<Integer, String> canciones,
